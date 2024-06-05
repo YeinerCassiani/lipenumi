@@ -11,7 +11,7 @@ const Header = () => {
       }}
     >
       <img
-        src="src/assets/logo.png"
+        src="../src/assets/logo.png"
         alt="Lipenumi Logo"
         style={{
           maxHeight: "100%",
