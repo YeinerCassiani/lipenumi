@@ -9,19 +9,20 @@ const contentStyle = {
 
 import Inscripciones from "@assets/INSCRIPCIONES.png";
 import ISCE from "@assets/ISCE.png";
+import Colegio from "@assets/colegio.png";
 
 const PrincipalPage = () => {
   return (
     <div>
       <Carousel effect="fade" autoplay>
         <div>
+            <img src={Colegio} style={contentStyle} alt="Colegio" />
+        </div>
+        <div>
           <img src={Inscripciones} style={contentStyle} alt="INSCRIPCIONES" />
         </div>
         <div>
             <img src={ISCE} style={contentStyle} alt="ISCE" />
-        </div>
-        <div>
-            <img src="src\assets\ISCE3.png" style={contentStyle} alt="ISCE" />
         </div>
         <div>
             <img src="src\assets\ISCE3.png" style={contentStyle} alt="ISCE" />

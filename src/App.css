@@ -142,3 +142,71 @@ body {
   padding: 1em;
   background-color: #fff;
 }
+
+/* ContactForm.css */
+.contact-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  scroll-padding-top: 10px;
+  border-bottom: 2px solid #1890ff;
+  border-top: 2px solid #1890ff;
+  display: inline-block;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0;
+  padding: 20px;
+  background: #ffffffc5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .ant-form-item-label > label {
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-input {
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.custom-input:focus,
+.custom-input:hover {
+  border-color: #40a9ff;
+  box-shadow: 0 0 8px rgba(64, 169, 255, 0.3);
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #1890ff;
+  border-color: #1890ff;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+  box-shadow: 0 4px 12px rgba(64, 169, 255, 0.3);
+}
+
+
+.contact-form {
+  max-width: 500px;
+  margin: 0;
+  padding: 20px;
+  background: #ffffffc5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

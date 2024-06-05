@@ -3,6 +3,7 @@ import { Tabs } from "antd";
 import PrincipalPage from "./PrincipalPage";
 import InstitutionalHorizon from "./InstitutionalHorizon";
 import InstitutionalPrinciples from "./InstitutionalPrinciples";
+import Contact from "./Contact";
 
 const items = [
   {
@@ -51,8 +52,8 @@ const NavBar = () => {
         </>
       );
       break;
-    case "3":
-      content = null;
+    case "6":
+      content = <Contact />;
       break;
     default:
       content = null;
