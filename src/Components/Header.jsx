@@ -1,4 +1,5 @@
 import React from "react";
+import  logo  from "@assets/logo.png";
 
 const Header = () => {
   return (
@@ -11,7 +12,7 @@ const Header = () => {
       }}
     >
       <img
-        src="../src/assets/logo.png"
+        src={logo}
         alt="Lipenumi Logo"
         style={{
           maxHeight: "100%",
