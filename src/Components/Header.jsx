@@ -1,5 +1,5 @@
 import React from "react";
-import  logo  from "@assets/logo.png";
+import logo from "@assets/logo.png";
 
 const Header = () => {
   return (
@@ -17,7 +17,8 @@ const Header = () => {
         style={{
           maxHeight: "100%",
           objectFit: "contain",
-          background: "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,250,255,1) 30%)",
+          background:
+            "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,250,255,1) 30%)",
           width: "15%",
         }}
       />
@@ -26,10 +27,11 @@ const Header = () => {
           width: "85%",
           background:
             "linear-gradient(90deg, rgba(255,250,255,1) 0%, rgba(41,94,165,1) 30%, rgba(41,94,165,1) 70%, rgba(41,94,165,0) 100%",
-            padding: "1em",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
+          padding: "1em",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <h1
@@ -47,6 +49,31 @@ const Header = () => {
         >
           LICEO PEDAGÓGICO NUEVO MILENIO
         </h1>
+        <h4
+          style={{
+            textAlign: "center",
+            color: "#fff",
+            fontSize: "0.8vw",
+            fontFamily: "'Poppins', sans-serif",
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+          }}
+        >
+          Res. de Aprobación No. 0081 del 21 de Enero de 2021 DANE: 347001051741
+        </h4>
+        <h2
+          style={{
+            textAlign: "center",
+            color: "#fff", // Color de relleno del texto
+            fontSize: "1.5vw",
+            fontFamily: "'Poppins', sans-serif",
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)", // Sombra en el texto
+            fontStyle: "italic", // Texto en cursiva
+            WebkitTextStroke: "1px red", // Borde rojo alrededor del texto
+            MozTextStroke: "1px red", // Para compatibilidad en Firefox
+          }}
+        >
+          MATRÍCULAS ABIERTAS
+        </h2>
       </div>
     </div>
   );

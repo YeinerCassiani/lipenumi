@@ -1,31 +1,62 @@
 import React from "react";
 import { Carousel } from "antd";
-const contentStyle = {
-  height: "60vh",
-  color: "#fff",
-  margin: "auto",
-  background: "#364d79",
-};
-
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import Inscripciones from "@assets/INSCRIPCIONES.png";
 import ISCE from "@assets/ISCE.png";
 import Colegio from "@assets/colegio.png";
 
+const contentStyle = {
+  height: "70vh",
+  width: "80%", 
+  margin: "auto",
+  background: "#364d79",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+};
+
+const arrowStyle = {
+  position: "absolute",
+  top: "50%",
+  transform: "translateY(-50%)",
+  fontSize: "40px",
+  color: "#000",
+  zIndex: 1,
+  cursor: "pointer",
+};
+
 const PrincipalPage = () => {
+  const carouselRef = React.useRef();
+
+  const nextSlide = () => {
+    carouselRef.current.next();
+  };
+
+  const prevSlide = () => {
+    carouselRef.current.prev();
+  };
+
   return (
-    <div>
-      <Carousel effect="fade" autoplay>
+    <div style={{ position: "relative" }}>
+      {/* Flechas personalizadas */}
+      <LeftOutlined
+        style={{ ...arrowStyle, left: "10px" }}
+        onClick={prevSlide}
+      />
+      <RightOutlined
+        style={{ ...arrowStyle, right: "10px" }}
+        onClick={nextSlide}
+      />
+
+      <Carousel effect="fade" autoplay ref={carouselRef}>
         <div>
-            <img src={Colegio} style={contentStyle} alt="Colegio" />
+          <img src={Colegio} style={contentStyle} alt="Colegio" />
         </div>
         <div>
           <img src={Inscripciones} style={contentStyle} alt="INSCRIPCIONES" />
         </div>
         <div>
-            <img src={ISCE} style={contentStyle} alt="ISCE" />
-        </div>
-        <div>
-            <img src="src\assets\ISCE3.png" style={contentStyle} alt="ISCE" />
+          <img src={ISCE} style={contentStyle} alt="ISCE" />
         </div>
       </Carousel>
     </div>

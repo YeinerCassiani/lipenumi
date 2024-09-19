@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Principios from "@assets/principios.png";
 const InstitutionalPrinciples = () => {
   const principles = [
     {
@@ -35,7 +35,7 @@ const InstitutionalPrinciples = () => {
   return (
     <div className="institutional-principles">
         <div className="card-icon" >
-            🤝
+            <img src={Principios} style={{width: "15%"}} alt="Principios" />
         </div>
       <h2>PRINCIPIOS INSTITUCIONALES</h2>
       <br />
