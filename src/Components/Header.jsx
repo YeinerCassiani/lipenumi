@@ -72,7 +72,7 @@ const Header = () => {
             MozTextStroke: "1px red", // Para compatibilidad en Firefox
           }}
         >
-          MATRÍCULAS ABIERTAS
+          INSCRIPCIONES Y MATRÍCULAS ABIERTAS
         </h2>
       </div>
     </div>
