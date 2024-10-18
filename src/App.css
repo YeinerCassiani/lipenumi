@@ -17,6 +17,8 @@ body {
   text-align: center;
 }
 
+/* NAVBAR */
+
 /* Contenedor de los tabs */
 .custom-tabs .ant-tabs-nav {
   display: flex;
@@ -56,11 +58,87 @@ body {
 /* Línea del tab activo */
 .custom-tabs .ant-tabs-ink-bar {
   background-color: #ffeb3b;
+} 
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .custom-tabs .ant-tabs-nav {
+    margin-top: 0.5em;
+  }
+  .custom-tabs .ant-tabs-tab {
+    font-size: 50%;
+  }
 }
+
+@media (max-width: 480px) {
+  .custom-tabs .ant-tabs-nav {
+    margin-top: 0.5em;
+  }
+
+  .custom-tabs .ant-tabs-tab {
+    font-size: 50%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* FIN NAVBAR */
+
+/* SUB NAVBAR */
+
+/* Contenedor de los tabs */
+.custom-sub-tabs .ant-tabs-nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-top: 1em;
+}
+
+/* Estilo de cada tab */
+.custom-sub-tabs .ant-tabs-tab {
+  font-size: 100%;
+  font-weight: bold;
+  margin: 0 15px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+/* Hover sobre la pestaña activa: cambiar el color a negro */
+.custom-sub-tabs .ant-tabs-tab.ant-tabs-tab-active:hover .ant-tabs-tab-btn {
+  color: #000; /* Cambiar a negro cuando esté activa y se haga hover */
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .custom-sub-tabs .ant-tabs-nav {
+    margin-top: 0.5em;
+  }
+  .custom-sub-tabs .ant-tabs-tab {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-sub-tabs .ant-tabs-nav {
+    margin-top: 0.5em;
+  }
+
+  .custom-sub-tabs .ant-tabs-tab {
+    font-size: 70%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* FIN SUB NAVBAR */
+
+/* HORIZONTE INSTITUCIONAL */
 
 .institutional-horizon {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en lugar de desbordarse */
   padding: 2em;
 }
 
@@ -72,6 +150,7 @@ body {
   text-align: justify;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  margin: 1em; /* Añade un margen entre las tarjetas */
 }
 
 .card:hover {
@@ -94,6 +173,32 @@ body {
 .card-text {
   color: #555;
 }
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .card {
+      width: 100%; /* Las tarjetas ocupan el 100% del ancho en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .institutional-horizon {
+      padding: 1em; /* Reduce el padding en pantallas muy pequeñas */
+  }
+
+  .card-title {
+      font-size: 1.25em; /* Ajusta el tamaño de la fuente para el título */
+  }
+
+  .card-icon {
+      font-size: 2.5em; /* Ajusta el tamaño del ícono */
+  }
+}
+
+
+/* FIN HORIZONTE INSTITUCIONAL */
+
+/* PRINCIPIOS INSTITUCIONALES */
 
 .institutional-principles {
   padding: 2em;
@@ -232,3 +337,195 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
+
+/* CONSEJO DIRECTIVO */
+
+.consejo-directivo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.member {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(100% / 2 - 40px); /* Two members per row in larger screens */
+  max-width: 400px;
+}
+
+.member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.member-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.member-info {
+  padding: 15px;
+}
+
+.member-info h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 0;
+}
+
+.member-info h4 {
+  font-size: 1.2rem;
+  color: #777;
+  margin: 5px 0 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .member {
+      width: 100%; /* Full width for mobile */
+  }
+}
+
+/* CUADRO DE HONOR */
+
+.cuadro-honor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #4a90e2;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #4a90e2;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+.student-card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid transparent;
+  position: relative;
+}
+
+.student-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  border-color: #4a90e2;
+}
+
+.student-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 5px solid #4a90e2;
+}
+
+.student-info {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.student-name {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.student-grade, .student-mention {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 5px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.student-mention {
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+/* Decoraciones adicionales */
+.student-card::before {
+  content: '★';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: #f39c12;
+  color: white;
+  font-size: 2rem;
+  padding: 0 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adaptación a pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .student-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-name {
+    font-size: 1.5rem;
+  }
+
+  .student-grade, .student-mention {
+    font-size: 1rem;
+  }
+}
+
+/* Adaptación a pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .student-name {
+    font-size: 1.4rem;
+  }
+
+  .student-grade, .student-mention {
+    font-size: 0.9rem;
+  }
+
+  .student-image {
+    height: 180px;
+  }
+}
+

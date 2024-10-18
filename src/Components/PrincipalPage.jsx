@@ -6,8 +6,8 @@ import ISCE from "@assets/ISCE.png";
 import Colegio from "@assets/colegio.png";
 
 const contentStyle = {
-  height: "70vh",
-  width: "80%", 
+  height: window.innerWidth <= 600 ? "25vh" : "70vh",
+  width: window.innerWidth <= 600 ? "100%" : "80%", 
   margin: "auto",
   background: "#364d79",
   display: "flex",

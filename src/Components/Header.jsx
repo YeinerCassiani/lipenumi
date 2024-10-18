@@ -20,6 +20,7 @@ const Header = () => {
           background:
             "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,250,255,1) 30%)",
           width: "15%",
+          display: window.innerWidth <= 600 ? 'none' : 'flex',
         }}
       />
       <div
@@ -38,7 +39,7 @@ const Header = () => {
           style={{
             textAlign: "center",
             color: "#fff",
-            fontSize: "2vw",
+            fontSize: window.innerWidth <= 600 ? "4vw" : "2vw",
             fontFamily: "'Poppins', sans-serif",
             textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
             transition: "transform 0.2s",
@@ -53,7 +54,7 @@ const Header = () => {
           style={{
             textAlign: "center",
             color: "#fff",
-            fontSize: "0.8vw",
+            fontSize: window.innerWidth <= 600 ? "2.5vw" : "0.8vw",
             fontFamily: "'Poppins', sans-serif",
             textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
           }}
@@ -64,7 +65,7 @@ const Header = () => {
           style={{
             textAlign: "center",
             color: "#fff", // Color de relleno del texto
-            fontSize: "1.5vw",
+            fontSize: window.innerWidth <= 600 ? "3vw" : "1.5vw",
             fontFamily: "'Poppins', sans-serif",
             textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)", // Sombra en el texto
             fontStyle: "italic", // Texto en cursiva

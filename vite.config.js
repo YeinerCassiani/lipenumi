@@ -6,9 +6,16 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: [{
-      find: '@assets',
-      replacement: path.resolve(path.join(__dirname, 'src/assets')),
-    }]
+    alias: [
+      {
+        find: '@assets',
+        replacement: path.resolve(path.join(__dirname, 'src/assets')),
+      },
+      {
+        find: '@docs',
+        replacement: path.resolve(path.join(__dirname, 'src/docs')),
+      }
+    ]
   },
+  assetsInclude: ['**/*.docx'],  // Include .docx files as assets
 })

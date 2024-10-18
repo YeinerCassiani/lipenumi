@@ -1,5 +1,5 @@
 import React from "react";
-import { FacebookOutlined, TwitterOutlined, InstagramOutlined } from '@ant-design/icons';
+import { FacebookOutlined, XOutlined, InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons';
 
 const Footer = () => {
   return (
@@ -12,11 +12,14 @@ const Footer = () => {
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <FacebookOutlined style={iconStyle} />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <TwitterOutlined style={iconStyle} />
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+            <XOutlined style={iconStyle} />
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <InstagramOutlined style={iconStyle} />
+          </a>
+          <a href="https://wa.me/573003929873" target="_blank" rel="noopener noreferrer">
+            <WhatsAppOutlined style={iconStyle} />
           </a>
         </div>
       </div>

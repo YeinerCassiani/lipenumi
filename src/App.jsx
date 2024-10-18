@@ -4,7 +4,7 @@ import "./App.css";
 import { Button } from "antd";
 import { Divider } from "antd";
 import Footer from "./Components/Footer";
-import { DollarOutlined } from '@ant-design/icons';
+import { DollarOutlined, WhatsAppOutlined } from '@ant-design/icons';
 function App() {
   return (
     <>
@@ -12,6 +12,31 @@ function App() {
       <NavBar />
       <Divider style={{backgroundColor: "#295EA5"}}/>
       <Footer />
+      <Button
+      type="primary"
+      icon={<WhatsAppOutlined />}
+      style={{
+        position: 'fixed',
+        bottom: 80,
+        right: 24,
+        width: 60,
+        height: 60,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#295EA5',
+        border: "solid 1px #000",
+        borderRadius: '40px',
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+        fontSize: '16px',
+        fontWeight: 'bold',
+        transition: 'all 0.3s ease',
+      }}
+      onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#389e0d')}
+      onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#295EA5')}
+      onClick={() => window.open('https://wa.me/573003929873', '_blank')}
+    >
+    </Button> 
       <Button
       type="primary"
       icon={<DollarOutlined />}
