@@ -1,29 +1,30 @@
 import React from "react";
+import baseImage from "@assets/250X250.png";
 
 const students = [
   {
     name: "Ana García",
     grade: "5to Grado",
     mention: "Excelencia Académica",
-    image: "https://via.placeholder.com/250",
+    image: baseImage,
   },
   {
     name: "Lucía Ramírez",
     grade: "4to Grado",
     mention: "Esfuerzo y Superación",
-    image: "https://via.placeholder.com/250",
+    image: baseImage,
   },
   {
     name: "Carlos Pérez",
     grade: "5to Grado",
     mention: "Liderazgo",
-    image: "https://via.placeholder.com/250",
+    image: baseImage,
   },
   {
     name: "Camilo Montes",
     grade: "4to Grado",
     mention: "Responsabilidad",
-    image: "https://via.placeholder.com/250",
+    image: baseImage,
   },
 ];
 
