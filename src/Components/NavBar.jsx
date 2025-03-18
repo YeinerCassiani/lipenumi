@@ -8,6 +8,8 @@ import CuadroHonor from "./CuadroHonor";
 import ConsejoAcademico from "./ConsejoAcademico";
 import Simbolos from "./Simbolos";
 import Descargas from "./Descargas";
+import Historia from "./Historia";
+import Valores from "./Valores";
 
 const { TabPane } = Tabs;
 
@@ -27,7 +29,7 @@ const NavBar = () => {
       content = (
         <Tabs defaultActiveKey="2-1" centered className="custom-sub-tabs">
           <TabPane tab="Historia" key="2-1">
-            <div></div>
+            <Historia />
           </TabPane>
           <TabPane tab="Horizonte Institucional" key="2-2">
             <InstitutionalHorizon />
@@ -36,7 +38,7 @@ const NavBar = () => {
             <Simbolos />
           </TabPane>
           <TabPane tab="Valores" key="2-4">
-            <div></div>
+            <Valores />
           </TabPane>
           <TabPane tab="Principios" key="2-5">
             <InstitutionalPrinciples />
@@ -76,7 +78,7 @@ const NavBar = () => {
         centered
         onChange={onChange}
         className="custom-tabs"
-        tabBarStyle={{ flexWrap: 'wrap' }} // Permitir que las pestañas se envuelvan
+        tabBarStyle={{ flexWrap: "wrap" }} // Permitir que las pestañas se envuelvan
       >
         <TabPane tab="INICIO" key="1" />
         <TabPane tab="INSTITUCIONAL" key="2" />
