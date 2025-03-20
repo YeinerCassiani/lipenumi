@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Tabs } from "antd";
 import PrincipalPage from "./PrincipalPage";
 import InstitutionalHorizon from "./InstitutionalHorizon";
@@ -10,11 +10,33 @@ import Simbolos from "./Simbolos";
 import Descargas from "./Descargas";
 import Historia from "./Historia";
 import Valores from "./Valores";
+import Inscripcion from "./Inscripcion";
+import ProcesoInscripcion from "./ProcesoInscripcion";
+import Requerimientos from "./Requerimientos";
+import ProcesoMatricula from "./ProcesoMatricula";
+import Psicorientacion from "./psicorientacion";
 
 const { TabPane } = Tabs;
 
 const NavBar = () => {
   const [activeTab, setActiveTab] = useState("1");
+
+  // Mapeo de rutas a claves de pestañas
+  const routeToKey = {
+    "/": "1",
+    "/institucional": "2",
+    "/gestion": "3",
+    "/dependencias": "4",
+    "/descargas": "5",
+    "/contacto": "6",
+    "/inscripciones": "7",
+  };
+
+  useEffect(() => {
+    // Obtener la ruta actual y asignar la pestaña correspondiente
+    const path = window.location.pathname;
+    setActiveTab(routeToKey[path] || "1"); // Si no coincide, usa "1" por defecto
+  }, []);
 
   const onChange = (key) => {
     setActiveTab(key);
@@ -61,11 +83,50 @@ const NavBar = () => {
         </Tabs>
       );
       break;
+    case "4":
+      content = (
+        <Tabs defaultActiveKey="4-1" centered className="custom-sub-tabs">
+          <TabPane tab="Dirección" key="4-1">
+            <></>
+          </TabPane>
+          <TabPane tab="Biblioteca" key="4-2">
+            <></>
+          </TabPane>
+          <TabPane tab="Laboratorio" key="4-3">
+            <></>
+          </TabPane>
+          <TabPane tab="Informática" key="4-4">
+            <></>
+          </TabPane>
+          <TabPane tab="Psicoorientación" key="4-5">
+            <Psicorientacion />
+          </TabPane>
+        </Tabs>
+      );
+      break;
     case "5":
       content = <Descargas />;
       break;
     case "6":
       content = <Contact />;
+      break;
+    case "7":
+      content = (
+        <Tabs defaultActiveKey="7-1" centered className="custom-sub-tabs">
+          <TabPane tab="General" key="7-1">
+            <Inscripcion />
+          </TabPane>
+          <TabPane tab="Inscripción" key="7-2">
+            <ProcesoInscripcion />
+          </TabPane>
+          <TabPane tab="Matricula" key="7-3">
+            <ProcesoMatricula />
+          </TabPane>
+          <TabPane tab="Requisitos" key="7-4">
+            <Requerimientos />
+          </TabPane>
+        </Tabs>
+      );
       break;
     default:
       content = null;
@@ -74,7 +135,7 @@ const NavBar = () => {
   return (
     <div>
       <Tabs
-        defaultActiveKey="1"
+        activeKey={activeTab} // Se actualiza con la URL
         centered
         onChange={onChange}
         className="custom-tabs"

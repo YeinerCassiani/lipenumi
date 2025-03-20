@@ -3,67 +3,77 @@ import logo from "@assets/logo.png";
 import Bandera from "@assets/bandera.png";
 
 const Simbolos = () => {
+  const cardStyle = {
+    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+    transition: "0.3s",
+    borderRadius: "5px",
+    margin: "10px auto", // Ajusta el margen para centrar
+    width: "90%", // Ajusta el ancho
+    backgroundColor: "white",
+    padding: "2em",
+  };
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        justifyContent: "center",
-        alignItems: "center",
-        margin: "0 20em",
-        gap: "2em",
-      }}
-    >
+    <div style={cardStyle}>
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
+          flexDirection: "row",
+          gap: "5em",
+          margin: "0 2em",
         }}
       >
-        <h2>Logo</h2>
-        <p style={{ textAlign: "justify" }}>
-          Contiene los siguientes símbolos:
-        </p>
-        <ul style={{ textAlign: "justify" }}>
-          <li>
-            <p>
-              Un libro abierto representa el énfasis hacia la lectura y la
-              escritura significativa.{" "}
-            </p>
-          </li>
-          <li>
-            <p>
-              El globo terráqueo que representa la tendencia pedagógica de
-              preparar hombres para la vida, capaces de transcender mediante el
-              conocimiento de su cultura regional, nacional, y mundial.
-            </p>
-          </li>
-        </ul>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <h2>Logo</h2>
+          <p style={{ textAlign: "justify" }}>
+            Contiene los siguientes símbolos:
+          </p>
+          <ul style={{ textAlign: "justify" }}>
+            <li>
+              <p>
+                Un libro abierto representa el énfasis hacia la lectura y la
+                escritura significativa.{" "}
+              </p>
+            </li>
+            <li>
+              <p>
+                El globo terráqueo que representa la tendencia pedagógica de
+                preparar hombres para la vida, capaces de transcender mediante
+                el conocimiento de su cultura regional, nacional, y mundial.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <img src={logo} alt="Logo" />
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <h2>Bandera</h2>
+          <p style={{ textAlign: "justify" }}>
+            Desde 2001, se diseñó la bandera del colegio fondo blanco, el cual
+            representa la tan anhelada paz que proclamamos los colombianos y en
+            especial los estudiantes de todos los rincones del País. Llevará el
+            escudo en el centro con el mapamundi y un libro abierto que tiene un
+            eslogan que dice “Un mundo abierto al conocimiento
+          </p>
+        </div>
+
+        <img src={Bandera} alt="Bandera" />
       </div>
 
-      <img src={logo} alt="Logo" />
-
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <h2>Bandera</h2>
-        <p style={{ textAlign: "justify" }}>
-          Desde 2001, se diseñó la bandera del colegio fondo blanco, el cual
-          representa la tan anhelada paz que proclamamos los colombianos y en
-          especial los estudiantes de todos los rincones del País. Llevará el
-          escudo en el centro con el mapamundi y un libro abierto que tiene un
-          eslogan que dice “Un mundo abierto al conocimiento
-        </p>
-      </div>
-
-      <img src={Bandera} alt="Bandera" />
       <div
         style={{
           display: "flex",

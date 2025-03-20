@@ -1,9 +1,18 @@
 import react from "react";
 
 function Historia() {
+  const cardStyle = {
+    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+    transition: "0.3s",
+    borderRadius: "5px",
+    margin: "10px auto", // Ajusta el margen para centrar
+    width: "80%", // Ajusta el ancho
+    backgroundColor: "white",
+    padding: "2em",
+  };
   return (
     <>
-      <div style={{ textAlign: "center", margin: "10px" }}>
+      <div style={cardStyle}>
         <h1> Reseña Historica </h1>
         <i style={{ color: "rgb(137,137,137)" }}>
           ” Para que cualquier cosa suceda, primero hay que hacer algo”
