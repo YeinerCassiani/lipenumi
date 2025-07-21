@@ -48,7 +48,15 @@ const Header = () => {
           onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
           onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
         >
-          <a href="/" style={{ textDecoration: "none", color: "#fff" }}>
+          <a
+            href="/"
+            style={{
+              textDecoration: "none",
+              color: "#fff",
+              fontFamily: "Times New Roman, serif", // Fuente para el texto del enlace
+              fontSize: "2.5vw",
+            }}
+          >
             LICEO PEDAGÓGICO NUEVO MILENIO
           </a>
         </h1>

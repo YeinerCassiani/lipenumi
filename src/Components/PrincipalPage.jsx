@@ -66,7 +66,7 @@ const PrincipalPage = () => {
         <div style={{ marginTop: "40px" }}>
           <h2
             style={{
-              fontSize: "24px",
+              fontSize: "35px",
               fontWeight: "bold",
               marginBottom: "20px",
             }}
