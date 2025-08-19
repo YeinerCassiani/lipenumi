@@ -1,6 +1,6 @@
 import React from "react";
-import Estudiantes1 from "@assets/Estudiantes1.jpg";
-import Estudiantes2 from "@assets/Estudiantes2.png";
+import Estudiantes1 from "@assets/estudiantes1.jpg";
+import Estudiantes2 from "@assets/estudiantes2.png";
 
 function Estudiantes() {
   const imgStyleRight = {

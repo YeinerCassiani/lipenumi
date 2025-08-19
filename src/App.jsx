@@ -4,7 +4,7 @@
   import { Button } from "antd";
   import { Divider } from "antd";
   import Footer from "./Components/Footer";
-  import { DollarOutlined, WhatsAppOutlined } from "@ant-design/icons";
+  import { DollarOutlined, WhatsAppOutlined, SettingOutlined } from "@ant-design/icons";
   import { useState } from "react";
   import Santillana from "@assets/santillana.png";
   import Horarios from "@assets/horarios.jpg";
@@ -120,6 +120,39 @@
           />
         </a>
         </div>
+
+        {/* Botón de acceso al panel admin */}
+        <Button
+          type="text"
+          icon={<SettingOutlined />}
+          style={{
+            position: "fixed",
+            top: 10,
+            right: 10,
+            width: 40,
+            height: 40,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            border: "1px solid #ddd",
+            borderRadius: "50%",
+            fontSize: "16px",
+            opacity: 0.5,
+            transition: "all 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.opacity = "1";
+            e.currentTarget.style.backgroundColor = "#295EA5";
+            e.currentTarget.style.color = "white";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.opacity = "0.5";
+            e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+            e.currentTarget.style.color = "initial";
+          }}
+          onClick={() => window.location.href = '/admin'}
+        />
         
         {/* <Button
           type="primary"

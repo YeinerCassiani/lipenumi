@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurar Admin - Lipenumi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #295EA5;
+            text-align: center;
+        }
+        .step {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #295EA5;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .button {
+            background: #295EA5;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Configuración del Panel Admin</h1>
+        <p>Este proceso creará el usuario administrador para el Cuadro de Honor.</p>
+        
+        <div class="step">
+            <h3>📋 Datos del Administrador:</h3>
+            <p><strong>Email:</strong> <code>admin@lipenumi.com.co</code></p>
+            <p><strong>Password:</strong> <code>Lipenumi2025!</code></p>
+        </div>
+
+        <div class="step">
+            <h3>🚀 Crear Usuario Admin:</h3>
+            <button id="createAdmin" class="button">Crear Usuario Administrador</button>
+            <div id="result" style="margin-top: 10px;"></div>
+        </div>
+
+        <div class="step">
+            <h3>🎯 Acceder al Panel:</h3>
+            <p>Una vez creado el usuario, puedes acceder en:</p>
+            <p><strong>URL:</strong> <a href="/admin" target="_blank">/admin</a></p>
+        </div>
+
+        <div class="step">
+            <h3>⚠️ Importante:</h3>
+            <ul>
+                <li>Solo ejecuta esto <strong>UNA VEZ</strong></li>
+                <li>Guarda las credenciales en un lugar seguro</li>
+                <li>Puedes eliminar este archivo después de la configuración</li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="module">
+        import { crearUsuarioAdmin } from '/src/firebase/authService.js';
+
+        document.getElementById('createAdmin').addEventListener('click', async () => {
+            const button = document.getElementById('createAdmin');
+            const result = document.getElementById('result');
+            
+            button.disabled = true;
+            button.textContent = 'Creando...';
+            result.innerHTML = '';
+
+            try {
+                const user = await crearUsuarioAdmin('admin@lipenumi.com.co', 'Lipenumi2025!');
+                result.innerHTML = `
+                    <div class="success">
+                        ✅ Usuario admin creado exitosamente!<br>
+                        Email: ${user.email}
+                    </div>
+                `;
+                button.textContent = 'Usuario Creado ✅';
+            } catch (error) {
+                if (error.code === 'auth/email-already-in-use') {
+                    result.innerHTML = '<div class="success">✅ El usuario admin ya existe</div>';
+                    button.textContent = 'Usuario ya existe ✅';
+                } else {
+                    result.innerHTML = `<div class="error">❌ Error: ${error.message}</div>`;
+                    button.disabled = false;
+                    button.textContent = 'Reintentar';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
