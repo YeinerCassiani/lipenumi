@@ -13,6 +13,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Router>
       <Routes>
         <Route path="/admin" element={<AdminContainer />} />
+        <Route path="/gestion" element={<AdminContainer />} />
+        <Route path="/panel" element={<AdminContainer />} />
         <Route path="/create-admin" element={<CreateAdmin />} />
         <Route path="/test-firebase" element={<TestFirebase />} />
         <Route path="/debug-cuadro" element={<DebugCuadroHonor />} />

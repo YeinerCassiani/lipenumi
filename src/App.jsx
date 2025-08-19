@@ -151,7 +151,7 @@
             e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
             e.currentTarget.style.color = "initial";
           }}
-          onClick={() => window.location.href = '/admin'}
+          onClick={() => window.location.href = '/gestion'}
         />
         
         {/* <Button
