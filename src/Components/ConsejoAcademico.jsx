@@ -1,4 +1,5 @@
 import React from "react";
+import directora from "@assets/directora.png";
 import psicorientadora from "@assets/psicorientadora.jpeg";
 import disciplina from "@assets/disciplina.jpeg";
 import coord_academico from "@assets/coord_academico.jpeg";
