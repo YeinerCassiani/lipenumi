@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import Inscripciones from "@assets/INSCRIPCIONES.png";
+import Inscripciones from "@assets/INSCRIPCIONES.jpeg";
 import ISCE from "@assets/ISCE.png";
 import Colegio from "@assets/colegio.png";
 import Inscripcion from "./Inscripcion";
