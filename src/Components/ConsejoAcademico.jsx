@@ -9,7 +9,7 @@ const members = [
   {
     name: "Blanca Junco Espinosa",
     position: "Directora",
-    image: "",
+    image: directora,
     text: "La Directora del Liceo Pedagógico Nuevo Milenio es una persona que encarna los principios y valores propios de la comunidad que representa. Profesional con capacidad de liderazgo, de administración, organizada e inquieta frente a las propuestas y cambios pedagógicos que favorece la dinamización y el avance del Proyecto Educativo Institucional. Del mismo modo es un excelente canal de comunicación y mediación entre los diferentes estamentos de la Comunidad Educativa. “Por una Educación Humanística, Creativa y Pertinente a las necesidades de la región y del país” junto a este lema, la Magister en pedagogía, Especialista en pedagogía del lenguaje, Licenciada en lenguas modernas y normalista superior, Blanca Rubiela Junco Espinosa Directora y fundadora de la institución, viene trabajando desde hace más de 25 años con este proyecto educativo.",
     email: "blancajunco@lipenumi.com.co",
   },
