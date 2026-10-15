@@ -54,7 +54,7 @@ const Inscripcion = () => {
               width: "fit-content",
             }}
           >
-            INSCRIPCIONES Y MATRÍCULAS 2025
+            INSCRIPCIONES Y MATRÍCULAS 2027
           </h1>
         </div>
         <p
